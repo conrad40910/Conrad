@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山河绘卷-星梦入诗</title>
+    <link rel="stylesheet" href="../static/CSS/base.css">
+    <link rel="stylesheet" href="../static/CSS/fall-asleep/login.css">
+    <link rel="stylesheet" href="../static/CSS/fall-asleep/register.css">
+    <link rel="stylesheet" href="../static/CSS/fall-asleep/recovery.css">
+    <link rel="icon" href="../static/img/logo/logo.png">
+</head>
+
+<body>
+    <video muted class="Backgroud_video" autoplay="autoplay" loop="loop">
+        <source src="../static/vedio/LoginBackVideo.mp4" type="video/mp4">
+        </source>
+    </video>
+    <div class="app">
+        <div class="logo-login">
+            <div class="logoArea">
+                <div style="width: 100%;height: 30px;"></div>
+                <img src="../static/img/logo/logo.png" alt="山河绘卷标志">
+                <h1>-- 山河绘卷 --</h1>
+            </div>
+            <div class="loginArea">
+                <div class="fromBox View" id="login">
+                    <div class="login_title" id="ErrorMessageLogin">
+                        <h4><strong>登</strong>创山河，<strong>录</strong>卷万书</h4>
+                    </div>
+                    <div class="formArea">
+                        <input type="email" name="userEmail" placeholder="邮箱"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageLogin'))" id="Login-userEmail">
+                        <br>
+                        <input type="password" name="userPassword" placeholder="密码"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageLogin'))" id="Login-userPassword">
+                        <br>
+                        <button type="button" onclick="Before_SendLogin(this);">立即登录</button>
+                        <span>
+                            <h4>---&nbsp;OR&nbsp;---</h4>
+                            <a href="#" class="Orther"
+                                onclick="ExChangePage(document.querySelector('#register'));">立即注册</a>
+                            &nbsp;|&nbsp;
+                            <a href="#" class="Orther"
+                                onclick="ExChangePage(document.querySelector('#recovery'));">找回密码</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="fromBox" id="register">
+                    <div class="register_title" id="ErrorMessageRegister">
+                        <h4><strong>注</strong>视星河，<strong>册</strong>绘千梦</h4>
+                    </div>
+                    <div class="formArea">
+                        <input type="email" name="userEmail" placeholder="邮箱"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageRegister'))"
+                            id="Register-userEmail">
+                        <br>
+                        <input type="text" name="emailCode" placeholder="邮箱验证码"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageRegister'))"
+                            style="width: 144px;margin-right: 4px;" id="Register-verificationCode">
+                        <button type="button" style="width: 100px;"
+                            onclick="BeforeRegisterCodeSend(this);">发送验证码</button>
+                        <br>
+                        <input type="password" name="userPassword" placeholder="设置密码"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageRegister'))"
+                            id="Register-password">
+                        <br>
+                        <button type="button" onclick="CheckRegister(this);">立即注册</button>
+                        <span>
+                            <h4>---&nbsp;OR&nbsp;---</h4>
+                            <a href="#" class="Orther"
+                                onclick="ExChangePage(document.querySelector('#login'));">立即登录</a>
+                            &nbsp;|&nbsp;
+                            <a href="#" class="Orther"
+                                onclick="ExChangePage(document.querySelector('#recovery'));">找回密码</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="fromBox" id="recovery">
+                    <div class="recovery_title" id="ErrorMessageRecovery">
+                        <h4><strong>找</strong>寻古今，<strong>回</strong>溯百年</h4>
+                    </div>
+                    <div class="formArea">
+                        <input type="email" name="userEmail" placeholder="邮箱"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageRecovery'))"
+                            id="Recovery-userEmail">
+                        <br>
+                        <input type="text" name="emailCode" placeholder="邮箱验证码"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageRecovery'))"
+                            style="width: 144px;margin-right: 4px;" id="Recovery-verificationCode">
+                        <button type="button" style="width: 100px;"
+                            onclick="BeforerecoveryCodeSend(this);">发送验证码</button>
+                        <br>
+                        <input type="password" name="newPassword" placeholder="新密码"
+                            onclick="ChangeOrin(document.querySelector('#ErrorMessageRecovery'))"
+                            id="Recovery-password">
+                        <br>
+                        <button type="button" onclick=" CheckRecovery(this);">立即修改</button>
+                        <span>
+                            <h4>---&nbsp;OR&nbsp;---</h4>
+                            <a href="#" class="Orther"
+                                onclick="ExChangePage(document.querySelector('#register'));">立即注册</a>
+                            &nbsp;|&nbsp;
+                            <a href="#" class="Orther"
+                                onclick="ExChangePage(document.querySelector('#login'));">回到登录</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/JS/fall-asleep/base.js"></script>
+    <script src="../static/JS/fall-asleep/login-send.js"></script>
+    <script src="../static/JS/fall-asleep/register-send.js"></script>
+    <script src="../static/JS/fall-asleep/recovery-send.js"></script>
+
+</body>
+
+</html>

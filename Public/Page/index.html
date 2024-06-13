@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山河绘卷——书香科技</title>
+    <link rel="stylesheet" href="../static/CSS/base.css">
+    <link rel="stylesheet" href="../static/CSS/index.css">
+    <link rel="stylesheet" href="../static/CSS/contact.css">
+    <link rel="stylesheet" href="../static/CSS/Read2Reward.css">
+    <link rel="stylesheet" href="../static/CSS/home.css">
+    <link rel="stylesheet" href="../static/CSS/chat.css">
+    <link rel="icon" href="../static/img/logo/logo.png">
+</head>
+
+<body onload="TS(document.querySelector('#Home'));">
+    <div class="app">
+        <div class="Sidebar">
+            <div class="BookPattern" style="border-top: none;">
+                <img src="../static/img/icon/option.svg" alt="??"
+                    onclick="OptionChange();TrackerAddInit();TrackerGoalExChange(0,0);">
+            </div>
+            <div class="SidebarBox">
+                <img src="../static/img/icon/Add.svg" alt="" class="TrackerAdd UnOption UnSpace"
+                    onclick="TrackerAddAction(this);TrackerAddInit(1);" id="TrackerAddIMG">
+                <h1 id="SidebarTitle">山河绘卷</h1>
+                <ul class="SelectArea UnOption UnSpace">
+                    <li onclick="ExChange(document.querySelector('#Home'))"><img src="../static/img/icon/home.svg"
+                            alt="???">
+                        <h3>首页</h3>
+                    </li>
+                    <li></li>
+                    <li onclick="ExChange(document.querySelector('#recommended'))"><img
+                            src="../static/img/icon/Daily.svg" alt="???">
+                        <h3>每日推荐</h3>
+                    </li>
+                    <li></li>
+                    <li onclick="ExChange(document.querySelector('#Read2Reward'))"><img
+                            src="../static/img/icon/reward.svg" alt="???">
+                        <h3>书卷计仪</h3>
+                    </li>
+                    <li></li>
+                    <li onclick="ExChange(document.querySelector('#reading'))"><img src="../static/img/icon/Read.svg"
+                            alt="???">
+                        <h3>论道清坛</h3>
+                    </li>
+                    <li></li>
+                    <li onclick="ExChange(document.querySelector('#connection'))"><img
+                            src="../static/img/icon/phone.svg" alt="???">
+                        <h3>联系我们</h3>
+                    </li>
+                    <li></li>
+                    <li onclick="ExChange(document.querySelector('#about'))"><img src="../static/img/icon/about.svg"
+                            alt="???">
+                        <h3>关于我们</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="BookPattern" style="border-bottom: none;">
+                <img src="../static/img/logo/logo.png" alt="???" style="width: 70px;"
+                    onclick="clearAllCookie();location.reload('/');">
+            </div>
+        </div>
+        <div class="Main">
+            <div class="container UnView" id="Home">
+                <div class="Face">
+                    <video muted class="Backgroud_video" autoplay="autoplay">
+                        <source src="../static/vedio/homeFace.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <div class="TextContent">
+                        <a href="#" class="CenterText">
+                            <h2>山 河 绘 卷</h2>
+                            <p>畅游书海，智绘山河；科技点亮未来，知识成就梦想。</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container UnView" id="recommended">
+                <div class="Recommended"></div>
+                <div class="Face">
+                    <div class="CarouselChart">
+                        <a href="#" class="CCimg" style="z-index: 0;opacity: 1;">
+                            <img src="../static/img/recommend-background.jpg" alt="图片不见了QAQ">
+                            <table class="book-info">
+                                <tr>
+                                    <td rowspan="4">
+                                        <img src="../static/img/book1.jpg">
+                                    </td>
+                                    <th>书名</th>
+                                    <td>《草房子》</td>
+                                </tr>
+                                <tr>
+                                    <th>作者</th>
+                                    <td>曹文轩</td>
+                                </tr>
+                                <tr>
+                                    <th>简介</th>
+                                    <td>《草房子》的故事以乡村孩子桑桑的视角，回忆了他在油麻地六年的小学时光。在这段人生启蒙的宝贵时期里，他所遇到的人、发生的事以及交杂在其中的各种情感纠葛，与同学、亲人之间还有与人生中那些虽然擦肩而过却刻骨铭心的人。有少男少女之间毫无瑕疵的纯情，不幸少年与厄运拼搏的悲怆与优雅，在死亡体验中对生命的深切而优美的领悟，大人们之间扑朔迷离且又充满诗情画意的情感纠葛。
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
+                        <a href="#" class="CCimg" style="z-index: 1;opacity: 0;">
+                            <img src="../static/img/recommend-background.jpg" alt="图片不见了QAQ">
+            
+                            <table class="book-info">
+                                <tr>
+                                    <td rowspan="4">
+                                        <img src="../static/img/book2.jpg">
+                                    </td>
+                                    <th>书名</th>
+                                    <td>《追风筝的人》</td>
+                                </tr>
+                                <tr>
+                                    <th>作者</th>
+                                    <td>卡勒德·胡赛尼（Khaled Hosseini）</td>
+                                </tr>
+                                <tr>
+                                    <th>简介</th>
+                                    <td>全书围绕风筝与阿富汗的两个少年展开，讲述了一个富家少年与家中仆人，关于人性的背叛与救赎的故事。小说属于成长类文学范畴的作品，描写了主人公阿米尔寻求灵魂救赎的成长历程，作者想要呼唤人们的良知，告诫人们“不善良的人终将会在痛苦的沼泽中不断挣扎”。
+                                    </td>
+                                </tr>
+                            </table>
+            
+                        </a>
+                        <a href="#" class="CCimg" style="z-index: 2;opacity: 0;">
+                            <img src="../static/img/recommend-background.jpg" alt="图片不见了QAQ">
+            
+                            <table class="book-info">
+                                <tr>
+                                    <td rowspan="4">
+                                        <img src="../static/img/book3.jpg">
+                                    </td>
+                                    <th>书名</th>
+                                    <td>《动物庄园》（Animal Farm）</td>
+                                </tr>
+                                <tr>
+                                    <th>作者</th>
+                                    <td>乔治·奥威尔（George Orwell）</td>
+                                </tr>
+                                <tr>
+                                    <th>简介</th>
+                                    <td>该作讲述农场的一群动物成功地进行了一场“革命”，将压榨他们的人类东家赶出农场，建立起一个平等的动物社会。然而，动物领袖，那些聪明的猪们最终却篡夺了革命的果实，成为比人类东家更加独裁和极权的统治者。
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container UnView" id="reading">
+                <div class="Reading">
+                    <div id="chat-container">
+                        <div id="messages">
+                            <!-- Chat messages will appear here -->
+                        </div>
+                        <div id="chat-form">
+                            <!-- <input type="text" id="chat-input" autocomplete="off" placeholder="输入你的消息..."> -->
+                            <textarea name="" id="chat-input"></textarea>
+                            <button onclick="ChatSubmit(this);" id="ChatSUB">发送</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container UnView" id="Read2Reward">
+                <div class="Tracker">
+                    <div class="DecorativeStrips"></div>
+                    <div class="TrackerBody">
+                        <div class="TrackerList">
+
+                        </div>
+                    </div>
+                    <div class="DecorativeStrips"></div>
+                </div>
+            </div>
+            <div class="container UnView" id="connection">
+                <div class="Connection">
+                    <h2>联系我们</h2>
+                    <p>如果您有任何疑问或建议，请随时联系我们：</p>
+                    <div>
+                        <label for="conn">联系方式:</label>
+                        <input type="text" id="conn" name="conn"><br><br>
+                        <label for="message">留言:</label><br>
+                        <textarea id="feedbackMessage" name="message" rows="4" cols="50"></textarea><br><br>
+                        <input type="submit" value="提交" onclick="feedback(this);">
+                    </div>
+                    <h3>邮箱：shanhehuijuan@163.com</h3>
+                </div>
+            </div>
+            <div class="container UnView" id="about">
+                <div class="About">
+                    <div class="word">
+                        <h2>团队成员<br /></h2>
+                        <p><strong>前端开发</strong> - 赵震阳<br><br></p>
+                        <p><strong>后端开发</strong> - 王惜林<br><br></p>
+                        <p><strong>产品经理</strong> - 符琼方<br><br></p>
+                        <p><strong>美术设计</strong> - 郑禹彤<br><br></p>
+                        <p><strong>文案设计</strong> - 王浩源<br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container UnView" id="TrackerAddArea">
+                <div class="TrackerAddArea">
+                    <div class="TrackerAdd_BookMessage">
+                        <div class="TrackerAdd_BookCover">
+                            <span id="image_preview"><img src="../static/img/MomentsWeShared.jpg" alt="???"></span>
+                        </div>
+                        <div class="TrackerAdd_BookOther">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><span><strong style="color: red;">*</strong>请输入书籍名字：</span></td>
+                                        <td><input type="text" name="bookName" id="bookName" placeholder="云边有个小卖部"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span><strong style="color: red;">*</strong>请输入书籍作者：</span></td>
+                                        <td><input type="text" name="bookAuthor" id="bookAuthor" placeholder="张嘉佳"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span><strong style="opacity: 0;">*</strong>请上传书籍封面：</span></td>
+                                        <td><label for="AddUpLoad_BookCover" id="AddUpLoad_BookCoverName">选择文件</label>
+                                            <input type="file" name="bookCover" multiple onchange="uploadImg();"
+                                                style="display: none;" id="AddUpLoad_BookCover">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span><strong style="color: red;">*</strong>请输入书籍总页数：</span></td>
+                                        <td><input type="number" name="bookPage" id="bookPage" placeholder="306"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span><strong style="color: red;">*</strong>请输入当前阅读页数：</span></td>
+                                        <td><input type="number" name="bookReadPage" id="bookReadPage"
+                                                placeholder="306">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="TrackerAdd_SendWold">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><span><strong style="color: red;">*</strong>请输入书籍简介：</span></td>
+                                    <td><textarea name="bookIntroduce" class="ReSet_textarea"
+                                            id="bookIntroduce"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><span><strong style="color: red;">*</strong>完成此目标，想给自己什么奖励？</span></td>
+                                    <td><textarea name="bookReward" class="ReSet_textarea" id="bookReward"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span><strong style="color: red;">*</strong>关于这本书，你有什么其他想说的？</span></td>
+                                    <td><textarea name="OtherText" class="ReSet_textarea" id="OtherText"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="TrackAdd_Option">
+                        <button onclick="SendTracker(this)">添加</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/JS/index.js"></script>
+    <script src="../static/JS/home/CarouselChart.js"></script>
+    <script src="../static/JS/home/Tracker.js"></script>
+    <script src="../static/JS/home/Read2Reward.js"></script>
+    <script src="../static/JS/Chat.js"></script>
+    <script src="../static/JS/chatSend.js"></script>
+    <script>
+        var textarea = document.querySelectorAll('.ReSet_textarea');
+        var textareaOne = textarea[0], textareaTwo = textarea[1], textareaThree = textarea[2];
+        textareaOne.addEventListener('input', (e) => {
+            textareaOne.style.height = '100px';
+            textareaOne.style.height = e.target.scrollHeight + 'px';
+        });
+        textareaTwo.addEventListener('input', (e) => {
+            textareaTwo.style.height = '100px';
+            textareaTwo.style.height = e.target.scrollHeight + 'px';
+        });
+        textareaThree.addEventListener('input', (e) => {
+            textareaThree.style.height = '100px';
+            textareaThree.style.height = e.target.scrollHeight + 'px';
+        });//书卷计仪添加书（目标）输入区域自动伸缩
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+.Connection{
+    background-image: url("../img/Connectbackground.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #bbfca7;
+}
+
+.About{
+    background-image: url("../img/Aboutbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items:center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.word{
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    background-color: transparent;
+    padding: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Connection h2{
+    margin-top: 10%;
+    font-size: 50px;
+    color: #333;
+}
+
+.Connection h3{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+
+.About h2 {
+    font-size: 50px;
+    color: #333;
+}
+
+.About h3{
+    margin-top: 0%;
+    font-size: 35px;
+    color: #333;
+}
+
+.Connection p,
+.About p {
+    margin-top: 40px;
+    height: 50px;
+    font-size: 25px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.Connection form,
+.About form {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.Connection label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.Connection input[type="text"],
+.Connection textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:rgb(255, 255, 255,0.1);
+    opacity:0.5;
+}
+
+.Connection input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.Connection input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.Connection li{
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+}

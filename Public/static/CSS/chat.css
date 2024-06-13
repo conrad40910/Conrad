@@ -1,0 +1,117 @@
+#chat-container {
+  width: 80%;
+  height: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 163, 25, 0.7);
+  background-color: rgba(255, 233, 106, 0.2);
+  display: inline-block;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#messages {
+  height: calc(100% - 50px); /* 输入栏空间 */
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* display: inline-block; */
+  padding: 5px;
+}
+
+.message {
+  width: 100%;
+  font-size: 22px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  word-wrap: break-word; /* 自动换行 */
+  word-break: break-all;
+  max-width: 100%; /* 不超出容器宽度 */
+  box-sizing: border-box;
+}
+
+.message-icon {
+  font-size: 16px;
+}
+
+.message-time {
+  margin-left: 10px;
+  font-size: 12px;
+  color: gray;
+}
+
+.message.user .message-icon {
+  color: rgb(0, 0, 0);
+}
+
+.message.bot .message-icon {
+  color: black;
+}
+
+#chat-form {
+  display: flex;
+  bottom: 0;
+  height: 64px;
+  align-items: flex-end; /* 置于底部 */
+  justify-content: space-between; /* 水平两端对齐 */
+  padding: 10px;
+  background-color: rgb(255, 185, 79, 0.4);
+}
+
+#chat-input {
+  display: inline-block;
+  width: calc(100% - 70px);
+  height: 40px;
+  line-height: 40px;
+  flex: 1;
+  font-size: 20px;
+  padding: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  resize: none;
+  border: none;
+  background-color: #ffffff83;
+  transition: all 200ms ease-in-out;
+}
+
+#chat-input:hover,
+#chat-input:active,
+#chat-input:focus {
+  background-color: #fff;
+}
+
+#chat-input::-webkit-scrollbar{
+  display: none;
+}
+
+
+#chat-form button {
+  height: 40px;
+  width: 60px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #e18104;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#chat-form button:hover {
+  background-color: #db8a10;
+}
+
+.user {
+  align-self: flex-end; /* 用户消息靠右对齐 */
+  flex-direction: row-reverse; /* 图标放在右侧 */
+  height: 40px;
+}
+
+.bot {
+  align-self: flex-start; /* 机器人消息靠左对齐 */
+  flex-direction: row; /* 图标放在左侧 */
+  height: 40px;
+}

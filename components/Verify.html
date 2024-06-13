@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邮件验证码</title>
+    <style>
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f9f9f9;
+        }
+
+        .email-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: left;
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            font-size: 14px;
+            color: #555555;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .email-wrapper {
+                width: 100%;
+            }
+            .header, .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table class="email-wrapper" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="header">
+                <h1 style="margin-bottom: 10px;">山河绘卷</h1>
+                <p>欢迎注册登录我们的网站！</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="content">
+                <h2 style="color: #007bff; margin-bottom: 20px;">收到邮箱验证码</h2>
+                <p style="margin-bottom: 20px;">尊敬的用户您好，感谢您的{%SendMessage%}！</p>
+                <p>您的验证码是（有效期在您下次刷新页面前）：</p>
+                <p><span class="code">{%CheckCode%}</span></p>
+                <p style="margin-top: 20px;">如果您有任何疑问，请随时<a href="#" style="color: #007bff;">联系我们</a>。</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="footer">
+                <p style="margin-bottom: 10px;">注意：您收到此电子邮件是因为您注册了我们的网站。<br>
+                    如果不是您本人操作，请注意账户安全!</p>
+                <p style="font-size:8px;">此电子邮件由系统自动发送，请勿回复。请保管好您的邮箱，避免账号被他人盗用!</p>
+                <p style="font-size:8px;">&copy; 2024 山河绘卷。</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

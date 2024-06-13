@@ -1,0 +1,152 @@
+.app {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 0px;
+  background-color: #ffffff;
+}
+.Sidebar,
+.Main {
+  display: inline-block;
+  vertical-align: top;
+  /* position: fixed; */
+  div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+/*左侧区域*/
+.Sidebar {
+  height: 100%;
+  width: 6%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: rgb(134, 133, 133);
+}
+.SidebarBox {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  text-align: center;
+  h1 {
+    font-size: 24px;
+    color: white;
+    font-weight: 800;
+    align-self: center;
+    justify-self: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transition: all 0.3s;
+    font-family: Kingsoft_Cloud_Font;
+    letter-spacing: 20px;
+  }
+}
+.BookPattern {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  display: grid;
+  border-bottom: 1px white solid;
+  border-top: 1px white solid;
+  img {
+    justify-self: center;
+    align-self: center;
+    width: 30px;
+  }
+}
+.TrackerAdd {
+  width: 30px;
+  justify-self: center;
+  align-self: center;
+  transition: all 0.3s;
+}
+.SelectArea {
+  width: 100%;
+  height: auto;
+  list-style: none;
+  justify-self: center;
+  align-self: center;
+  transition: all 0.3s;
+  li {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    img {
+      width: 30px;
+      transition: all 0.5s;
+    }
+    h3 {
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+    }
+  }
+  li:hover {
+    img {
+      width: 35px;
+    }
+  }
+}
+.UnOption {
+  opacity: 0;
+}
+.UnSpace {
+  display: none;
+}
+/*页面层次*/
+#Home {
+  z-index: 1;
+}
+#recommended {
+  z-index: 2;
+}
+#reading {
+  z-index: 3;
+  background-image: url(../img/chatbackground.jpg);
+}
+#Read2Reward {
+  z-index: 4;
+}
+#connection {
+  z-index: 5;
+}
+#about {
+  z-index: 6;
+}
+#TrackerAddArea{
+  z-index: 7;
+}
+/***/
+/*右侧区域*/
+.Main {
+  height: 100%;
+  width: 94%;
+  position: relative;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: overlay;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  transition: all 1s;
+  position: absolute;
+  opacity: 1;
+  div {
+    flex-shrink: 0;
+  }
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.UnView {
+  opacity: 0;
+  width: 0 !important;
+}
+/***/
